@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./src/home_page.png" type="image/x-icon" id="icon">
+    <script src="./scripts/index.js"></script>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        margin: 0px;
+    }
+
+    body {
+        background: fixed;
+        background-image: url('./src/background.svg');
+        background-repeat: no-repeat;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    h1 {
+        font-size: 10vh;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 32vh;
+        top: 33vh;
+        bottom: 33vh;
+    }
+
+    .home-page {
+        height: 100vh;
+    }
+
+    .img1 {
+        height: 80vh;
+        position: absolute;
+        left: 130vh;
+        top: 10vh;
+        bottom: 10vh;
+        border: solid 5px;
+        border-radius: 20px;
+        border-color: white;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        left: 32.5vh;
+        top: 63vh;
+        bottom: 33vh;
+    }
+
+    .nav-links {
+        font-size: 2.5vh;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+        margin-right: 10vh;
+        position: relative;
+    }
+
+
+    .nav-links::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .nav-links:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .about-me {
+        height: 100vh;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        margin-top: 15vh;
+        font-size: 5vh;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    hr {
+        height: 7px;
+        background-color: white;
+    }
+</style>
+
+<body>
+    <div class="home-page">
+        <h1>Hi there! <br> Meet Faizaan...</h1>
+        <div class="navbar">
+            <div class="nav-links"><a href="#about-me" onclick="about_me()">About Me</a></div>
+            <div class="nav-links"><a href="#blog">Weblog</a></div>
+            <div class="nav-links"><a href="#projects">Projects</a></div>
+        </div>
+        <img class="img1" src="./src/Faizaan-img1.jpg" alt="Faizaan Image 1">
+    </div>
+    <hr>
+    <div id="about-me" class="about-me">
+        <h2>About Me</h2>
+
+
+    </div>
+</body>
+
+</html>
