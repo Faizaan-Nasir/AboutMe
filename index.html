@@ -98,13 +98,14 @@
 
     .about-me {
         height: 100vh;
+        position: relative;
     }
 
     h2 {
         width: 100%;
         text-align: center;
         position: absolute;
-        margin-top: 15vh;
+        margin-top: 13vh;
         font-size: 5vh;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
@@ -116,23 +117,98 @@
         height: 7px;
         background-color: white;
     }
+
+    .about-me-content {
+        width: 50vw;
+        text-align: center;
+        position: absolute;
+        left: 25vw;
+        right: 25vw;
+        margin-top: 25vh;
+        font-size: 3vh;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        color: #ffffff;
+    }
+
+    .fade-image-1 {
+        background-image: url("./src/Faizaan-img2.jpg");
+        height: 100vh;
+        width: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 121px 0px 70px -25px rgb(10, 10, 10);
+        position: absolute;
+        right: 0;
+    }
+
+    .fade-image-2 {
+        background-image: url("./src/Faizaan-img3.jpg");
+        height: 49.5vh;
+        width: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -121px 0px 70px -25px rgb(10, 10, 10);
+        position: absolute;
+        left: 0;
+    }
+
+    .line {
+        height: 1vh;
+        background-color: #ffffff;
+        box-shadow: inset -130px 0px 70px -25px rgb(10, 10, 10);
+        width: 50vh;
+        position: absolute;
+        left: 0;
+        top: 49.5vh;
+    }
+
+    .fade-image-3 {
+        background-image: url("./src/Faizaan-img4.jpg");
+        height: 49.5vh;
+        width: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -121px 0px 70px -25px rgb(10, 10, 10);
+        position: absolute;
+        left: 0;
+        top: 50.5vh;
+    }
 </style>
 
 <body>
-    <div class="home-page">
+    <div class="home-page" onmouseenter="home_page()">
         <h1>Hi there! <br> Meet Faizaan...</h1>
         <div class="navbar">
-            <div class="nav-links"><a href="#about-me" onclick="about_me()">About Me</a></div>
+            <div class="nav-links"><a href="#about-me">About Me</a></div>
             <div class="nav-links"><a href="#blog">Weblog</a></div>
             <div class="nav-links"><a href="#projects">Projects</a></div>
         </div>
         <img class="img1" src="./src/Faizaan-img1.jpg" alt="Faizaan Image 1">
     </div>
     <hr>
-    <div id="about-me" class="about-me">
+    <div id="about-me" class="about-me" onmouseenter="about_me()">
+        <div class="fade-image-1"></div>
+        <div class="fade-image-2"></div>
+        <div class="fade-image-3"></div>
         <h2>About Me</h2>
-
-
+        <div class="about-me-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus labore repellat hic error quaerat
+            voluptates doloremque? Quas laudantium veniam, ad explicabo iure aspernatur, quaerat blanditiis, cum
+            adipisci ipsam at ratione.
+            <br><br>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ex, necessitatibus nulla enim consectetur
+            est, eum, reiciendis doloribus cumque tenetur omnis rerum beatae molestias animi harum consequatur! Quaerat,
+            numquam perferendis!
+            <br><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aliquam veniam ipsa illum nesciunt, magnam
+            eaque porro unde consequatur accusantium labore dignissimos ratione tempore? Accusamus enim voluptatem
+            molestias sint animi.
+        </div>
+        <div class="line"></div>
     </div>
 </body>
 
