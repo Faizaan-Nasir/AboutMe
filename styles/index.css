@@ -156,7 +156,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        background-color: #ffffff;
+        background-color: #666666;
         border-radius: 2vh;
         width: 24vw;
         margin: 1.2vh auto;
@@ -167,7 +167,7 @@
         font-size: 2.5vh;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        color: rgb(255, 53, 225);
+        color: rgb(255, 255, 255);
         padding-bottom: 0.6vh;
         padding-top: 0.6vh;
         position: relative;
@@ -175,5 +175,5 @@
     }
 
     .navbar-pages-links:hover {
-        background-color: #dcdcdc;
+        background-color: #525252;
     }
