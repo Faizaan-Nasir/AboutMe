@@ -28,7 +28,19 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: inset 8vw 0px 70px -25px rgb(10, 10, 10);
+        box-shadow: inset 8vw 0px 70px -25px rgb(0, 0, 0);
+        position: absolute;
+        right: 0;
+    }
+
+    .fade-image-1.changed {
+        background-image: url("./src/Faizaan-img2.jpg");
+        width: 25vw;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 8vw 0px 70px -25px rgb(255, 255, 255);
         position: absolute;
         right: 0;
     }
@@ -40,7 +52,19 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: inset -8vw 0px 70px -25px rgb(10, 10, 10);
+        box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
+        position: absolute;
+        left: 0;
+    }
+
+    .fade-image-2.changed {
+        background-image: url("./src/Faizaan-img3.jpg");
+        height: 49.5vh;
+        width: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
         position: absolute;
         left: 0;
     }
@@ -52,37 +76,51 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        box-shadow: inset -8vw 0px 70px -25px rgb(10, 10, 10);
+        box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
+        position: absolute;
+        left: 0;
+        top: 50.5vh;
+    }
+
+    .fade-image-3.changed {
+        background-image: url("./src/Faizaan-img4.jpg");
+        height: 49.5vh;
+        width: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
         position: absolute;
         left: 0;
         top: 50.5vh;
     }
 </style>
 
-<body>
+<body id="body">
     <div class="home-page" id="home" onmouseenter="home_page()">
-        <h1>Hi there! <br> Meet Faizaan...</h1>
+        <button onclick="invert()" id="invert"><img src="./src/sun.png" alt="sun" class="mode"></button>
+        <h1 id="h1">Hi there! <br> Meet Faizaan...</h1>
         <div class="navbar">
             <div class="nav-links"><a href="#about-me">About Me</a></div>
             <div class="nav-links"><a href="#blog">Weblog</a></div>
             <div class="nav-links"><a href="#projects">Projects</a></div>
         </div>
-        <img class="img1" src="./src/Faizaan-img1.jpg" alt="Faizaan Image 1">
+        <img class="img1" src="./src/Faizaan-img1.jpg" alt="Faizaan Image 1" id="img1">
     </div>
-    <hr>
+    <hr id="hr1">
     <div id="about-me" class="about-me" onmouseenter="about_me()">
         <div class="fade-image-1"></div>
         <div class="fade-image-2"></div>
         <div class="fade-image-3"></div>
-        <h2>About Me <br>
-            <div class="navbar-pages">
-                <div class="navbar-pages-links"><a href="#blog">Weblog</a></div>
-                <div class="navbar-pages-links"><a href="#home">Home</a></div>
-                <div class="navbar-pages-links"><a href="#projects">Projects</a></div>
+        <h2 id="heading-1">About Me <br>
+            <div class="navbar-pages" id="navbar-pages-1">
+                <a href="#blog" class="navbar-pages-links">Weblog</a>
+                <a href="#home" class="navbar-pages-links">Home</a>
+                <a href="#projects" class="navbar-pages-links">Projects</a>
             </div>
         </h2>
 
-        <div class="about-me-content">
+        <div class="about-me-content" id="about-me-content">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus labore repellat hic error quaerat
             voluptates doloremque? Quas laudantium veniam, ad explicabo iure aspernatur, quaerat blanditiis, cum
             adipisci ipsam at ratione.
@@ -97,16 +135,16 @@
         </div>
         <div class="line"></div>
     </div>
-    <hr>
+    <hr id="hr2">
     <div id="blog" class="blog" onmouseenter="blog()">
-        <h2>Blog
-            <div class="navbar-pages">
-                <div class="navbar-pages-links"><a href="#about-me">About Me</a></div>
-                <div class="navbar-pages-links"><a href="#home">Home</a></div>
-                <div class="navbar-pages-links"><a href="#projects">Projects</a></div>
+        <h2 id="heading-2">Blog
+            <div class="navbar-pages" id="navbar-pages-2">
+                <a href="#about-me" class="navbar-pages-links">About Me</a>
+                <a href="#home" class="navbar-pages-links">Home</a>
+                <a href="#projects" class="navbar-pages-links">Projects</a>
             </div>
         </h2>
-        <div class="entries">
+        <div class="entries" id="entries">
             <div class="date">
                 <h3 class="date-entry">
                     10th March, 2023:
@@ -141,6 +179,7 @@
             </div>
         </div>
     </div>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>

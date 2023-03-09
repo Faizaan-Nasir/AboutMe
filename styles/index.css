@@ -32,7 +32,7 @@
         left: 130vh;
         top: 10vh;
         bottom: 10vh;
-        border: solid 5px;
+        border: solid 7px;
         border-radius: 20px;
         border-color: white;
     }
@@ -66,6 +66,19 @@
         bottom: 0;
         left: 0;
         background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .nav-links.changed::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(40, 124, 105);
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
@@ -113,7 +126,16 @@
     .line {
         height: 1vh;
         background-color: #000000;
-        box-shadow: inset -8.5vw 0px 70px -25px rgb(10, 10, 10);
+        width: 25vw;
+        position: absolute;
+        left: 0;
+        top: 49.5vh;
+    }
+
+    .line.changed {
+        height: 1vh;
+        background-color: rgb(40, 124, 105);
+        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
         width: 25vw;
         position: absolute;
         left: 0;
@@ -129,13 +151,14 @@
     .entries {
         position: absolute;
         top: 24vh;
+        color: white;
     }
 
     .date-entry {
         font-family: 'Poppins', sans-serif;
         font-size: 3vh;
         font-weight: 600;
-        color: #ffffff;
+        /* color: #ffffff; */
         margin-left: 20vw;
         margin-top: 4vh;
     }
@@ -147,7 +170,7 @@
         padding-left: 4.75vw;
         font-weight: 400;
         font-size: 2.6vh;
-        color: #ffffff;
+        /* color: #ffffff; */
         margin-left: 20.25vw;
         border-left: #ffffff 5px solid;
     }
@@ -176,4 +199,32 @@
 
     .navbar-pages-links:hover {
         background-color: #525252;
+    }
+
+    .navbar-pages-links.changed {
+        width: 8vw;
+        font-size: 2.5vh;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        padding-bottom: 0.6vh;
+        padding-top: 0.6vh;
+        position: relative;
+        border-radius: 2vh;
+    }
+
+    .navbar-pages-links.changed:hover {
+        background-color: rgb(52, 153, 130);
+    }
+
+    button {
+        margin-top: 2vh;
+        margin-left: 2vh;
+        border: 0;
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    .mode {
+        width: 2.5vw;
     }
