@@ -255,28 +255,30 @@
             width: 95vw;
             margin: 25vh auto;
         }
+
+        @media screen and (max-width:626px) {
+            .about-me-content {
+                font-size: 3.5vw;
+            }
+        }
+
+        @media screen and (max-width:419px) {
+            .about-me-content {
+                font-size: 4.3vw;
+            }
+
+            .navbar-pages {
+                width: 60vw;
+            }
+
+            .navbar-pages-links {
+                width: 20vw;
+                font-size: 3.5vw;
+            }
+        }
+
     }
 
-    @media screen and (max-width:626px) {
-        .about-me-content {
-            font-size: 3.5vw;
-        }
-    }
-
-    @media screen and (max-width:419px) {
-        .about-me-content {
-            font-size: 4.3vw;
-        }
-
-        .navbar-pages {
-            width: 60vw;
-        }
-
-        .navbar-pages-links {
-            width: 20vw;
-            font-size: 3.5vw;
-        }
-    }
 
     .line.changed {
         height: 1vh;
