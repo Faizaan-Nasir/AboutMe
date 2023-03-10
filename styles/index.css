@@ -24,15 +24,17 @@
 
     .home-page {
         height: 100vh;
+        position: relative;
     }
 
     .img1 {
         height: 80vh;
         position: absolute;
-        left: 130vh;
+        /* left: 65vw; */
+        right: 4.5vw;
         top: 10vh;
         bottom: 10vh;
-        border: solid 7px;
+        border: solid 1vh;
         border-radius: 20px;
         border-color: white;
     }
@@ -56,6 +58,32 @@
         position: relative;
     }
 
+    @media screen and (max-aspect-ratio:16/8.75) {
+        .img1 {
+            display: none;
+        }
+
+        h1 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 23vh;
+            text-align: center;
+        }
+
+        .navbar {
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 70vh;
+        }
+
+        .nav-links {
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+    }
 
     .nav-links::after {
         content: '';
