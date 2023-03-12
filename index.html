@@ -98,7 +98,7 @@
 </style>
 
 <body id="body">
-    <div class="home-page" id="home" onmouseenter="home_page()">
+    <section class="home-page" id="home" onmouseenter="home_page()">
         <button onclick="invert()" id="invert"><img src="./src/sun.png" alt="sun" class="mode"></button>
         <h1 id="h1">Hi there! <br> Meet Faizaan...</h1>
         <div class="navbar">
@@ -107,9 +107,9 @@
             <div class="nav-links"><a href="#projects">Projects</a></div>
         </div>
         <img class="img1" src="./src/Faizaan-img1.jpg" alt="Faizaan Image 1" id="img1">
-    </div>
+    </section>
     <hr id="hr1">
-    <div id="about-me" class="about-me" onmouseenter="about_me()">
+    <section id="about-me" class="about-me" onmouseenter="about_me()">
         <div class="fade-image-1"></div>
         <div class="fade-image-2"></div>
         <div class="fade-image-3"></div>
@@ -135,9 +135,9 @@
             molestias sint animi.
         </div>
         <div class="line"></div>
-    </div>
+    </section>
     <hr id="hr2">
-    <div id="blog" class="blog" onmouseenter="blog()">
+    <section id="blog" class="blog" onmouseenter="blog()">
         <h2 id="heading-2">Weblog
             <div class="navbar-pages" id="navbar-pages-2">
                 <a href="#about-me" class="navbar-pages-links">About Me</a>
@@ -179,7 +179,51 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <hr id="hr3">
+    <section class="projects" id="projects" onmouseenter="projects()">
+        <h2 id="heading-3">Projects
+            <div class="navbar-pages" id="navbar-pages-3">
+                <a href="#about-me" class="navbar-pages-links">About Me</a>
+                <a href="#home" class="navbar-pages-links">Home</a>
+                <a href="#blog" class="navbar-pages-links">Weblog</a>
+            </div>
+        </h2>
+        <div class="project-boxes-container">
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 12/03/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 1/03/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 25/02/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 3/01/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 3/01/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 3/01/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 3/01/2023
+            </div>
+            <div class="project-boxes">
+                <img class="project-box-image" src="./src/sample.jpg" alt="sample">
+                Date: 3/01/2023
+            </div>
+        </div>
+    </section>
     <script src="./scripts/index.js"></script>
 </body>
 

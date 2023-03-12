@@ -17,6 +17,12 @@ function blog() {
     return false
 }
 
+function projects() {
+    document.getElementById("icon").href = "./src/projects.png"
+    document.getElementById("title").innerHTML = "Projects"
+    return false
+}
+
 function invert() {
     if (localStorage.visited == 0) {
         document.getElementById('body').style.backgroundImage = `url('./src/background-white.png')`
@@ -61,8 +67,15 @@ function invert() {
             element.style.borderColor = 'rgb(40, 124, 105)'
         })
         localStorage.visited = localStorage.visited + 1
+        containers = document.querySelectorAll('.project-boxes')
+        containers.forEach(element => {
+            element.classList.add('changed')
+        })
+        document.getElementById('heading-3').style.color = 'black'
+        document.getElementById('navbar-pages-3').style.backgroundColor = "rgb(40, 124, 105)"
     }
     else {
         window.location.href = 'index.html'
     }
+    document.getElementById('hr3').style.backgroundColor = "rgb(40, 124, 105)"
 }

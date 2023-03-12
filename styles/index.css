@@ -330,3 +330,45 @@
         background-color: transparent;
         border-radius: 8px;
     }
+
+    .projects {
+        height: 100vh;
+        position: relative;
+    }
+
+    .project-boxes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 27vh;
+    }
+
+    .project-boxes {
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-bottom: 5vh;
+        width: 14vw;
+        height: 32vh;
+        background: white;
+        border-radius: 9px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        transition: transform 0.5s;
+    }
+
+    .project-boxes.changed {
+        background: rgb(40, 124, 105);
+        color: white;
+    }
+
+    .project-boxes:hover {
+        transform: scale(1.05);
+    }
+
+    .project-box-image {
+        width: 12vw;
+        border-radius: 9px;
+        margin: 1vh 1vw;
+    }
