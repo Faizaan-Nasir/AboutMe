@@ -203,15 +203,7 @@
     }
 
     .navbar-pages-links.changed {
-        width: 8vw;
-        font-size: 2.5vh;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 600;
-        color: rgb(255, 255, 255);
-        padding-bottom: 0.6vh;
-        padding-top: 0.6vh;
-        position: relative;
-        border-radius: 2vh;
+        background-color: transparent;
     }
 
     .navbar-pages-links.changed:hover {
