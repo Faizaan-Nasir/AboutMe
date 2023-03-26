@@ -412,3 +412,38 @@
     h3 {
         font-size: 25px;
     }
+
+    .error {
+        display: hidden;
+    }
+
+    .error-message {
+        display: none;
+        text-align: center;
+        width: 80vw;
+        margin-left: 10vw;
+        font-size: 10vh;
+        height: 90vh;
+        margin-top: 5vh;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .main-body {
+        display: block;
+    }
+
+    @media screen and (max-width: 750px) {
+        .error {
+            display: block;
+        }
+
+        .error-message {
+            display: block;
+        }
+
+        .main-body {
+            display: none;
+        }
+    }
