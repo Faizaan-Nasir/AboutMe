@@ -73,6 +73,10 @@ function invert() {
         })
         document.getElementById('heading-3').style.color = 'black'
         document.getElementById('navbar-pages-3').style.backgroundColor = "rgb(40, 124, 105)"
+        headings = document.querySelectorAll('.headings')
+        headings.forEach(element => {
+            element.style.backgroundColor = "rgb(59, 179, 151, 0.65)"
+        })
     }
     else {
         window.location.href = 'index.html'
