@@ -317,7 +317,7 @@
         border-left: #ffffff 5px solid;
     }
 
-    @media screen and (max-width: 1423px) {
+    @media screen and (max-width: 1200px) {
         .date-entry {
             margin-left: 2vw;
             font-size: 2.5vh;
@@ -434,7 +434,7 @@
         display: block;
     }
 
-    @media screen and (max-width: 800px) and (min-width: 510px) {
+    @media screen and (max-height: 550px) and (max-width:1080px) and (min-width:400px) {
         .error {
             display: block;
         }
