@@ -434,7 +434,7 @@
         display: block;
     }
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 750px) and (min-width: 510px) {
         .error {
             display: block;
         }
