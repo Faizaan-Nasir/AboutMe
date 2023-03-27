@@ -273,6 +273,11 @@
 
     }
 
+    @media screen and (max-height:580px) and (max-width:400px) {
+        .about-me-content {
+            font-size: 2vh;
+        }
+    }
 
     .line.changed {
         height: 1vh;
@@ -319,12 +324,12 @@
 
     @media screen and (max-width: 1136px) and (min-width:770px) {
         .date-entry {
-            margin-left: 9vw;
+            margin-left: 6.4vw;
             font-size: 4.2vh;
         }
 
         .date-entry-content {
-            margin-left: 10vw;
+            margin-left: 7.4vw;
             width: 80vw;
             font-size: 2.5vh;
         }
@@ -332,13 +337,13 @@
 
     @media screen and (max-width:770px) {
         .date-entry {
-            margin-left: 2vw;
+            margin-left: 6vw;
             font-size: 2.5vh;
         }
 
         .date-entry-content {
-            margin-left: 6vw;
-            width: 76vw;
+            margin-left: 7vw;
+            width: 80vw;
             font-size: 1.6vh;
         }
     }
