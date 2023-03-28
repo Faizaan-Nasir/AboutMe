@@ -62,7 +62,7 @@
         width: 5vh;
     }
 
-    /* @media screen and (max-aspect-ratio:16/8.75) {
+    @media screen and (max-aspect-ratio:16/8.75) {
         .img1 {
             display: none;
         }
@@ -74,9 +74,9 @@
             top: 23vh;
             text-align: center;
         }
-    } */
+    }
 
-    /* @media screen and (max-width:780px) {
+    @media screen and (max-width:780px) {
         .navbar {
             justify-content: center;
             position: absolute;
@@ -99,7 +99,7 @@
         .navbar {
             top: 65vh;
         }
-    } */
+    }
 
     .nav-links::after {
         content: '';
@@ -211,7 +211,7 @@
     }
 
 
-    /* @media screen and (max-aspect-ratio:10.99/6) {
+    @media screen and (max-aspect-ratio:10.99/6) {
         .fade-image-1 {
             display: none;
         }
@@ -243,9 +243,9 @@
         .navbar-pages-links {
             width: 14vw;
         }
-    } */
+    }
 
-    /* @media screen and (max-aspect-ratio:7.9/6.1) {
+    @media screen and (max-aspect-ratio:7.9/6.1) {
         .about-me-content {
             width: 95vw;
             margin: 25vh auto;
@@ -278,7 +278,7 @@
         .about-me-content {
             font-size: 2vh;
         }
-    } */
+    }
 
     .line.changed {
         height: 1vh;
@@ -323,7 +323,7 @@
         border-left: #ffffff 5px solid;
     }
 
-    /* @media screen and (max-width: 1136px) and (min-width:770px) {
+    @media screen and (max-width: 1136px) and (min-width:770px) {
         .date-entry {
             margin-left: 6.4vw;
             font-size: 4.2vh;
@@ -347,7 +347,7 @@
             width: 80vw;
             font-size: 1.6vh;
         }
-    } */
+    }
 
     button {
         margin-top: 2vh;
@@ -453,7 +453,7 @@
         display: block;
     }
 
-    /* @media screen and (max-height: 550px) and (max-width:1080px) and (min-width:400px) {
+    @media screen and (max-height: 550px) and (max-width:1080px) and (min-width:400px) {
         .error {
             display: block;
         }
@@ -479,4 +479,4 @@
         .about-me-content {
             font-size: 3vw;
         }
-    } */
+    }
