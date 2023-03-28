@@ -1,8 +1,8 @@
 body {
-    background: fixed;
+    background: scroll;
     background-image: url('../src/background-black.png');
     background-repeat: no-repeat;
-    background-size: auto 100vh;
+    background-size: 100vh;
 }
 
 h1 {
