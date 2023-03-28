@@ -1,5 +1,23 @@
-.about-me-content {
-    font-size: 4.2vw;
+h1 {
+    font-size: 8vh;
+    position: absolute;
+    left: 0vw;
+    right: 0vw;
+    top: 23vh;
+    text-align: center;
+}
+
+.navbar {
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70vh;
+}
+
+.nav-links {
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .navbar-pages {
@@ -35,9 +53,11 @@
 }
 
 .about-me-content {
-    width: 75vw;
-    margin: 30vh auto;
+    width: 80vw;
+    margin: 0 auto;
+    font-size: 2vh;
     position: absolute;
+    top: 25vh;
     left: 0;
     right: 0;
 }
@@ -46,22 +66,10 @@
     display: none;
 }
 
-h1 {
-    font-size: 8vh;
-}
-
 .navbar {
     top: 65vh;
 }
 
 .img1 {
     display: none;
-}
-
-h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 23vh;
-    text-align: center;
 }
