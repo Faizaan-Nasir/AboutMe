@@ -2,7 +2,7 @@ body {
     background: scroll;
     background-image: url('../src/background-black.png');
     background-repeat: no-repeat;
-    background-size: 100vh;
+    background-size: cover;
 }
 
 h1 {
@@ -64,7 +64,7 @@ h1 {
     margin: 0 auto;
     font-size: 2vh;
     position: absolute;
-    top: 20vh;
+    top: 25vh;
     left: 0;
     right: 0;
 }
