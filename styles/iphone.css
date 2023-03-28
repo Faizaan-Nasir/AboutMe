@@ -1,8 +1,10 @@
 body {
-    background: scroll;
+    overflow: scroll;
     background-image: url('../src/background-black.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 h1 {
