@@ -59,7 +59,6 @@ function invert() {
             element.classList.add('changed')
         })
         document.getElementById('hr2').style.backgroundColor = "rgb(40, 124, 105)"
-        document.getElementById('hr4').style.backgroundColor = "rgb(40, 124, 105)"
         document.getElementById('heading-2').style.color = 'black'
         document.getElementById('navbar-pages-2').style.backgroundColor = "rgb(40, 124, 105)"
         document.getElementById('entries').style.color = "black"
