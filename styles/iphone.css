@@ -79,3 +79,7 @@ h1 {
 .img1 {
     display: none;
 }
+
+.project-boxes-excess {
+    display: none;
+}

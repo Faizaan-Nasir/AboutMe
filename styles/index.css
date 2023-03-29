@@ -393,6 +393,22 @@
         position: relative;
     }
 
+    .project-boxes-excess {
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-bottom: 8vh;
+        width: 220px;
+        height: 23vh;
+        background: white;
+        border-radius: 25px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        transition: transform 0.4s;
+        padding: 1.5vw;
+        background-image: url(./sample.jpg);
+        position: relative;
+    }
+
     .project-boxes.changed {
         background: rgb(59, 179, 151);
         background-image: url(./sample.jpg);
@@ -428,6 +444,20 @@
     .project-boxes:hover>.headings {
         display: none;
     }
+
+    .project-boxes-excess:hover {
+        transform: scale(1.02);
+        background-image: none;
+    }
+
+    .project-boxes-excess:hover>.description {
+        display: block;
+    }
+
+    .project-boxes-excess:hover>.headings {
+        display: none;
+    }
+
 
     .project-box-image {
         width: 16.25vw;
