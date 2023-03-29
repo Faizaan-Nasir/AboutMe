@@ -1,6 +1,6 @@
 body {
     background-image: url('../src/background-black.png');
-    background: local;
+    background: scroll;
     background-repeat: no-repeat;
     background-size: auto 100vh;
 }
