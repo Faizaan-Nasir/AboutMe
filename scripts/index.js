@@ -59,6 +59,7 @@ function invert() {
             element.classList.add('changed')
         })
         document.getElementById('hr2').style.backgroundColor = "rgb(40, 124, 105)"
+        document.getElementById('hr4').style.backgroundColor = "rgb(40, 124, 105)"
         document.getElementById('heading-2').style.color = 'black'
         document.getElementById('navbar-pages-2').style.backgroundColor = "rgb(40, 124, 105)"
         document.getElementById('entries').style.color = "black"
@@ -69,6 +70,10 @@ function invert() {
         localStorage.visited = localStorage.visited + 1
         containers = document.querySelectorAll('.project-boxes')
         containers.forEach(element => {
+            element.classList.add('changed')
+        })
+        containers_excess = document.querySelectorAll('.project-boxes-excess')
+        containers_excess.forEach(element => {
             element.classList.add('changed')
         })
         document.getElementById('heading-3').style.color = 'black'
