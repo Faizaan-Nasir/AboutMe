@@ -1,5 +1,5 @@
 body {
-    overflow: scroll;
+    background-attachment: fixed;
     background-image: url('../src/background-black.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
