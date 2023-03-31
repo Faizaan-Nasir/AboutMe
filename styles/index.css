@@ -415,6 +415,12 @@
         color: white;
     }
 
+    .project-boxes-excess.changed {
+        background: rgb(59, 179, 151);
+        background-image: url(./sample.jpg);
+        color: white;
+    }
+
     .headings {
         background-color: rgba(255, 255, 255, 0.65);
         position: absolute;
