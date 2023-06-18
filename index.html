@@ -16,6 +16,8 @@
         type="text/css" />
 
     <script src="./scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <style>
     .fade-image-1 {
@@ -125,20 +127,16 @@
             </h2>
 
             <div class="about-me-content" id="about-me-content">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus labore repellat hic error quaerat
-                voluptates doloremque? Quas laudantium veniam, ad explicabo iure aspernatur, quaerat blanditiis, cum
-                adipisci ipsam at ratione.
+                I am Faizaan, a grade 12 student studying in Delhi Private School, Sharjah. Born in the year 2006, I
+                have been in the UAE for as long as I can remember.
                 <br><br>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ex, necessitatibus nulla enim
-                consectetur
-                est, eum, reiciendis doloribus cumque tenetur omnis rerum beatae molestias animi harum consequatur!
-                Quaerat,
-                numquam perferendis!
+                I am interested in a wide variety of fields including aviation, astrophysics, computer science and
+                medical science (it's unblievable, I know). I'm not much into sports, although I do play badminton
+                passionately. I would like to pursue a career in Software Engineering and am preparing for the same.
                 <br><br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aliquam veniam ipsa illum nesciunt,
-                magnam
-                eaque porro unde consequatur accusantium labore dignissimos ratione tempore? Accusamus enim voluptatem
-                molestias sint animi.
+                My hobbies include simulating, watching movies and frequently taking up projects that I do not end up
+                finishing. Feel free to explore this webpage and the projects I've worked on (and hopefully completed by
+                now).
             </div>
             <div class="line"></div>
         </section>
@@ -189,6 +187,14 @@
         </section>
         <hr id="hr3">
         <section class="projects" id="projects" onmouseenter="projects()">
+            <script>
+                const client = contentful.createClient({
+                    space: "<space_id",
+                    accessToken: "<your_access_token>",
+                });
+                // Pass this client argument in the functions that requires it
+            </script>
+            <script src="./contentful-wrapper.js"></script>
             <h2 id="heading-3">Projects
                 <div class="navbar-pages" id="navbar-pages-3">
                     <a href="#about-me" class="navbar-pages-links">About Me</a>
@@ -198,51 +204,58 @@
             </h2>
             <div class="project-boxes-container">
                 <div class="project-boxes">
-                    <div class="headings">ShopOnline</div>
+                    <div class="headings">DPS Trading Platform</div>
                     <div class="description">
-                        <h3>ShopOnline</h3>
-                        <img src="./src/github-icon.png" alt="github" width="25px"><br>
-                        A website that teaches students about the risks of investing in stocks through simulation.
+                        <h3>DPS Trading Platform</h3>
+                        <a href="https://github.com/TanmeenPatel/DPS-Trading-Platform"><img src="./src/github-icon.png"
+                                alt="github" width="25px"></a><br>
+                        Website to learn the risks involved in investments.
                     </div>
                 </div>
                 <div class="project-boxes">
                     <div class="headings">ShopOnline</div>
                     <div class="description">
                         <h3>ShopOnline</h3>
-                        <img src="./src/github-icon.png" alt="github" width="25px"><br>
-                        A website that teaches students about the risks of investing in stocks through simulation.
+                        <a href="https://github.com/Faizaan-Nasir/ShopOnline"><img src="./src/github-icon.png"
+                                alt="github" width="25px"></a><br>
+                        This is a template for store owners looking for a pre-made website for their stores.
                     </div>
                 </div>
                 <div class="project-boxes-excess">
-                    <div class="headings">ShopOnline</div>
+                    <div class="headings">SQL and Python</div>
                     <div class="description">
-                        <h3>ShopOnline</h3>
-                        <img src="./src/github-icon.png" alt="github" width="25px"><br>
-                        A website that teaches students about the risks of investing in stocks through simulation.
+                        <h3>SQL and Python</h3>
+                        <a href="https://github.com/Faizaan-Nasir/Student-Record-Keeping-System"><img
+                                src="./src/github-icon.png" alt="github" width="25px"></a><br>
+                        A python program that connects python with SQL and allows for manipulation of data.
                     </div>
                 </div>
                 <div class="project-boxes-excess">
-                    <div class="headings">ShopOnline</div>
+                    <div class="headings">School Library</div>
                     <div class="description">
-                        <h3>ShopOnline</h3>
-                        <img src="./src/github-icon.png" alt="github" width="25px"><br>
-                        A website that teaches students about the risks of investing in stocks through simulation.
+                        <h3>School Library</h3>
+                        <a href="https://github.com/Faizaan-Nasir/Library"><img src="./src/github-icon.png" alt="github"
+                                width="25px"></a><br>
+                        A website for schools that stores data about students and their books borrowed (JS).
                     </div>
                 </div>
                 <div class="project-boxes-excess">
-                    <div class="headings">ShopOnline</div>
+                    <div class="headings">Website Builder</div>
                     <div class="description">
-                        <h3>ShopOnline</h3>
-                        <img src="./src/github-icon.png" alt="github" width="25px"><br>
-                        A website that teaches students about the risks of investing in stocks through simulation.
+                        <h3>Website Builder</h3>
+                        <a href="https://github.com/Faizaan-Nasir/Website-Builder"><img src="./src/github-icon.png"
+                                alt="github" width="25px"></a><br>
+                        A python interface with which one can create a website in less than ten minutes.
                     </div>
                 </div>
                 <div class="project-boxes-excess">
-                    <div class="headings">ShopOnline</div>
+                    <div class="headings">Pet Advisor</div>
                     <div class="description">
-                        <h3>ShopOnline</h3>
-                        <img src="./src/github-icon.png" alt="github" width="25px"><br>
-                        A website that teaches students about the risks of investing in stocks through simulation.
+                        <h3>Pet Advisor</h3>
+                        <a href="https://github.com/pet-advisor/pets"><img src="./src/github-icon.png" alt="github"
+                                width="25px"></a><br>
+                        A website created by a team of 4 that helps pet owners with general day to day needs for their
+                        pets.
                     </div>
                 </div>
             </div>
