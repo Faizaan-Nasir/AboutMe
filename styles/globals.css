@@ -1,10 +1,87 @@
+    /* Fade images */
+    .fade-image-1 {
+        background-image: url("/Faizaan-img2.jpg");
+        width: 25vw;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 8vw 0px 70px -25px rgb(0, 0, 0);
+        position: absolute;
+        right: 0;
+    }
+
+    .fade-image-1.changed {
+        background-image: url("/Faizaan-img2.jpg");
+        width: 25vw;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset 8vw 0px 70px -25px rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+    }
+
+    .fade-image-2 {
+        background-image: url("/Faizaan-img3.jpg");
+        height: 49.5vh;
+        width: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
+        position: absolute;
+        left: 0;
+    }
+
+    .fade-image-2.changed {
+        background-image: url("/Faizaan-img3.jpg");
+        height: 49.5vh;
+        width: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
+        position: absolute;
+        left: 0;
+    }
+
+    .fade-image-3 {
+        background-image: url("/Faizaan-img4.jpg");
+        height: 49.5vh;
+        width: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
+        position: absolute;
+        left: 0;
+        top: 50.5vh;
+    }
+
+    .fade-image-3.changed {
+        background-image: url("/Faizaan-img4.jpg");
+        height: 49.5vh;
+        width: 25vw;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
+        position: absolute;
+        left: 0;
+        top: 50.5vh;
+    }
+    
+    /* =============================== */
+    
     html {
         scroll-behavior: smooth;
     }
 
     body {
         background: fixed;
-        background-image: url('../src/background-black.png');
+        background-image: url('/background-black.png');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -389,7 +466,7 @@
         font-family: 'Poppins', sans-serif;
         transition: transform 0.4s;
         padding: 1.5vw;
-        background-image: url(./sample.jpg);
+        background-image: url(/sample.jpg);
         position: relative;
     }
 
@@ -405,19 +482,19 @@
         font-family: 'Poppins', sans-serif;
         transition: transform 0.4s;
         padding: 1.5vw;
-        background-image: url(./sample.jpg);
+        background-image: url(/sample.jpg);
         position: relative;
     }
 
     .project-boxes.changed {
         background: rgb(59, 179, 151);
-        background-image: url(./sample.jpg);
-        color: white;
+        background-image: url(/sample.jpg);
+        color: white
     }
 
     .project-boxes-excess.changed {
         background: rgb(59, 179, 151);
-        background-image: url(./sample.jpg);
+        background-image: url(/sample.jpg);
         color: white;
     }
 
