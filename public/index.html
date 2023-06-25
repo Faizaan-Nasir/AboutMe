@@ -1,101 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title id="title">Home Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="shortcut icon"
+            href="./src/home_page.png"
+            type="image/x-icon"
+            id="icon"
+        />
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link
+            rel="stylesheet"
+            media="only screen and (max-device-width: 480px)"
+            href="./styles/iphone.css"
+            type="text/css"
+        />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">Home Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="./src/home_page.png" type="image/x-icon" id="icon">
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="./styles/iphone.css"
-        type="text/css" />
+        <script src="./scripts/index.js"></script>
+    </head>
+    <style>
+        .fade-image-1 {
+            background-image: url("./src/Faizaan-img2.jpg");
+            width: 25vw;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset 8vw 0px 70px -25px rgb(0, 0, 0);
+            position: absolute;
+            right: 0;
+        }
 
-    <script src="./scripts/index.js"></script>
-</head>
-<style>
-    .fade-image-1 {
-        background-image: url("./src/Faizaan-img2.jpg");
-        width: 25vw;
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset 8vw 0px 70px -25px rgb(0, 0, 0);
-        position: absolute;
-        right: 0;
-    }
+        .fade-image-1.changed {
+            background-image: url("./src/Faizaan-img2.jpg");
+            width: 25vw;
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset 8vw 0px 70px -25px rgb(255, 255, 255);
+            position: absolute;
+            right: 0;
+        }
 
-    .fade-image-1.changed {
-        background-image: url("./src/Faizaan-img2.jpg");
-        width: 25vw;
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset 8vw 0px 70px -25px rgb(255, 255, 255);
-        position: absolute;
-        right: 0;
-    }
+        .fade-image-2 {
+            background-image: url("./src/Faizaan-img3.jpg");
+            height: 49.5vh;
+            width: 25vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
+            position: absolute;
+            left: 0;
+        }
 
-    .fade-image-2 {
-        background-image: url("./src/Faizaan-img3.jpg");
-        height: 49.5vh;
-        width: 25vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
-        position: absolute;
-        left: 0;
-    }
+        .fade-image-2.changed {
+            background-image: url("./src/Faizaan-img3.jpg");
+            height: 49.5vh;
+            width: 25vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
+            position: absolute;
+            left: 0;
+        }
 
-    .fade-image-2.changed {
-        background-image: url("./src/Faizaan-img3.jpg");
-        height: 49.5vh;
-        width: 25vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
-        position: absolute;
-        left: 0;
-    }
+        .fade-image-3 {
+            background-image: url("./src/Faizaan-img4.jpg");
+            height: 49.5vh;
+            width: 25vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
+            position: absolute;
+            left: 0;
+            top: 50.5vh;
+        }
 
-    .fade-image-3 {
-        background-image: url("./src/Faizaan-img4.jpg");
-        height: 49.5vh;
-        width: 25vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset -8vw 0px 70px -25px rgb(0, 0, 0);
-        position: absolute;
-        left: 0;
-        top: 50.5vh;
-    }
+        .fade-image-3.changed {
+            background-image: url("./src/Faizaan-img4.jpg");
+            height: 49.5vh;
+            width: 25vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
+            position: absolute;
+            left: 0;
+            top: 50.5vh;
+        }
+    </style>
 
-    .fade-image-3.changed {
-        background-image: url("./src/Faizaan-img4.jpg");
-        height: 49.5vh;
-        width: 25vw;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: inset -8vw 0px 70px -25px rgb(255, 255, 255);
-        position: absolute;
-        left: 0;
-        top: 50.5vh;
-    }
-</style>
-
-<body id="body">
-    
-    <script src="./scripts/index.js"></script>
-</body>
-
+    <body id="body">
+        <script src="./scripts/index.js"></script>
+    </body>
 </html>

@@ -1,7 +1,7 @@
 export default function Inverter() {
     return (
         <>
-            <button onClick={invert()} id="invert">
+            <button id="invert">
                 <img src="sun.png" alt="sun" className="mode" />
             </button>
         </>

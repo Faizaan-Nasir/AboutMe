@@ -1,4 +1,5 @@
 import Inverter from "../inverter/Invert";
+import Navbar from "../navbar/Navbar";
 
 export default function HomePage() {
     return (
