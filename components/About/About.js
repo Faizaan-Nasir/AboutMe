@@ -1,17 +1,31 @@
-import Navbar from "../navbar/Navbar";
+import { useContext } from "react";
+import Navbar from "../Navbar/Navbar";
+import Heading from "../ThemeComponents/SectionHeading";
+import { ThemeContext } from "../../lib/ThemeContext";
 
 export default function About() {
+    const { theme } = useContext(ThemeContext);
     return (
-        <section id="about-me" className="about-me" onmouseenter="about_me()">
-            <div className="fade-image-1"></div>
-            <div className="fade-image-2"></div>
-            <div className="fade-image-3"></div>
-            <h2 id="heading-1">
+        <section id="about-me" className="about-me">
+            <div
+                className={`fade-image-1 ${theme.val == 1 ? "" : "changed"}`}
+            ></div>
+            <div
+                className={`fade-image-2 ${theme.val == 1 ? "" : "changed"}`}
+            ></div>
+            <div
+                className={`fade-image-3 ${theme.val == 1 ? "" : "changed"}`}
+            ></div>
+            <Heading>
                 About Me <br />
                 <Navbar except={"About Me"}></Navbar>
-            </h2>
+            </Heading>
 
-            <div className="about-me-content" id="about-me-content">
+            <div
+                className="about-me-content"
+                id="about-me-content"
+                style={{ color: `${theme.val == 1 ? "white" : "black"}` }}
+            >
                 I am Faizaan, a grade 12 student studying in Delhi Private
                 School, Sharjah. Born in the year 2006, I have been in the UAE
                 for as long as I can remember.
@@ -29,7 +43,7 @@ export default function About() {
                 explore this webpage and the projects I&apos;ve worked on (and
                 hopefully completed by now).
             </div>
-            <div className="line"></div>
+            <div className={`line ${theme.val == 1 ? "" : "changed"}`}></div>
         </section>
     );
 }

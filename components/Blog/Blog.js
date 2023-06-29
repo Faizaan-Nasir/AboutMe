@@ -1,40 +1,40 @@
-import Navbar from "../navbar/Navbar";
+import { useContext } from "react";
+import Navbar from "../Navbar/Navbar";
+import Heading from "../ThemeComponents/SectionHeading";
+import DateEntry from "../DateEntry/DateEntry";
+import { ThemeContext } from "../../lib/ThemeContext";
 
 export default function Blog() {
+    const { theme } = useContext(ThemeContext);
     return (
-        <section id="blog" className="blog" onmouseenter="blog()">
-            <h2 id="heading-2">
+        <section id="blog" className="blog">
+            <Heading>
                 Weblog
                 <Navbar except={"Weblog"}></Navbar>
-            </h2>
-            <div className="entries" id="entries">
-                <div className="date">
-                    <h3 className="date-entry">10th March, 2023:</h3>
-                    <div className="date-entry-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Inventore distinctio earum excepturi eligendi,
-                        nemo illum nihil perferendis ea eius beatae quae? Quia
-                        nisi nemo molestias dolores, veniam doloremque sint
-                    </div>
-                </div>
-                <div className="date">
-                    <h3 className="date-entry">9th March, 2023:</h3>
-                    <div className="date-entry-content">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Consectetur laudantium ea voluptas eveniet, qui
-                        facere sequi quos accusantium nemo culpa fugit itaque
-                        ullam, neque rem? Esse doloribus autem non ratione.
-                    </div>
-                </div>
-                <div className="date">
-                    <h3 className="date-entry">8th March, 2023:</h3>
-                    <div className="date-entry-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Ab, nam libero, eveniet omnis culpa consequuntur dolores
-                        est sint quam totam nihil id quae ipsa mollitia iusto
-                        aperiam placeat atque ducimus.
-                    </div>
-                </div>
+            </Heading>
+            <div
+                className="entries"
+                id="entries"
+                style={{ color: `${theme.val == 1 ? "white" : "black"}` }}
+            >
+                <DateEntry date="10th March, 2023">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Inventore distinctio earum excepturi eligendi, nemo illum
+                    nihil perferendis ea eius beatae quae? Quia nisi nemo
+                    molestias dolores, veniam doloremque sint
+                </DateEntry>
+                <DateEntry date="9th March, 2023">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Consectetur laudantium ea voluptas eveniet, qui facere sequi
+                    quos accusantium nemo culpa fugit itaque ullam, neque rem?
+                    Esse doloribus autem non ratione.
+                </DateEntry>
+                <DateEntry date="8th March, 2023">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                    nam libero, eveniet omnis culpa consequuntur dolores est
+                    sint quam totam nihil id quae ipsa mollitia iusto aperiam
+                    placeat atque ducimus.
+                </DateEntry>
             </div>
         </section>
     );

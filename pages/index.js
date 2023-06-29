@@ -1,11 +1,18 @@
-import "../styles/globals.css";
+"use client";
 import HomePage from "../components/HomePage/HomePage";
 import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
 import Projects from "../components/Projects/Projects";
+import Divider from "../components/ThemeComponents/Dividers";
+import { ThemeContext, ThemeProvider } from "../lib/ThemeContext";
+import { useContext, useEffect } from "react";
 export default function Page() {
+    const { theme } = useContext(ThemeContext);
+    useEffect(() => {
+        console.log(theme.val);
+    }, [theme]);
     return (
-        <>
+        <ThemeProvider>
             <div className="error">
                 <div className="error-message">
                     This website does not work well in this orientation. Please
@@ -16,13 +23,13 @@ export default function Page() {
             </div>
             <div className="main-body">
                 <HomePage></HomePage>
-                <hr id="hr1" />
+                <Divider />
                 <About></About>
-                <hr id="hr2" />
+                <Divider />
                 <Blog></Blog>
-                <hr id="hr3" />
+                <Divider />
                 <Projects></Projects>
             </div>
-        </>
+        </ThemeProvider>
     );
 }

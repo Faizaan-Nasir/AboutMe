@@ -1,12 +1,13 @@
 import ProjectBox from "./ProjectBoxes";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
+import Heading from "../ThemeComponents/SectionHeading";
 export default function Projects() {
     return (
-        <section className="projects" id="projects" onmouseenter="projects()">
-            <h2 id="heading-3">
+        <section className="projects" id="projects">
+            <Heading>
                 Projects
                 <Navbar except="Projects"></Navbar>
-            </h2>
+            </Heading>
             <div className="project-boxes-container">
                 <ProjectBox
                     title="DPS Trading Platform"

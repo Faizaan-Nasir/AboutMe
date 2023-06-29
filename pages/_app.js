@@ -1,6 +1,7 @@
+import "../styles/globals.css";
 import Head from "next/head";
 
-export default function HomeLayout({ children }) {
+function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
@@ -27,15 +28,10 @@ export default function HomeLayout({ children }) {
                     type="image/x-icon"
                     id="icon"
                 />
-                <link rel="stylesheet" href="./styles/index.css" />
-                <link
-                    rel="stylesheet"
-                    media="only screen and (max-device-width: 480px)"
-                    href="./styles/iphone.css"
-                    type="text/css"
-                />
             </Head>
-            <main>{children}</main>
+            <Component {...pageProps} />
         </>
     );
 }
+
+export default MyApp;
