@@ -5,14 +5,28 @@ import Blog from "../components/Blog/Blog";
 import Projects from "../components/Projects/Projects";
 import Divider from "../components/ThemeComponents/Dividers";
 import { ThemeContext, ThemeProvider } from "../lib/ThemeContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 export default function Page() {
-    const { theme } = useContext(ThemeContext);
-    useEffect(() => {
-        console.log(theme.val);
-    }, [theme]);
     return (
         <ThemeProvider>
+            <Content></Content>
+        </ThemeProvider>
+    );
+}
+
+export function Content() {
+    const { theme } = useContext(ThemeContext);
+    useEffect(() => {
+        let bg =
+            theme.val == 1
+                ? "url('/background-black.png')"
+                : "url('/background-white.png')";
+        document.body.style.backgroundImage = bg;
+    }, [theme]);
+
+    return (
+        <>
             <div className="error">
                 <div className="error-message">
                     This website does not work well in this orientation. Please
@@ -30,6 +44,6 @@ export default function Page() {
                 <Divider />
                 <Projects></Projects>
             </div>
-        </ThemeProvider>
+        </>
     );
 }

@@ -1,12 +1,19 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import Navbar from "../Navbar/Navbar";
 import Heading from "../ThemeComponents/SectionHeading";
 import { ThemeContext } from "../../lib/ThemeContext";
+import Section from "../Section/Section";
 
 export default function About() {
     const { theme } = useContext(ThemeContext);
     return (
-        <section id="about-me" className="about-me">
+        <Section
+            title="About Me"
+            icon="/about_me.png"
+            className="about-me"
+            id="about-me"
+        >
             <div
                 className={`fade-image-1 ${theme.val == 1 ? "" : "changed"}`}
             ></div>
@@ -44,6 +51,6 @@ export default function About() {
                 hopefully completed by now).
             </div>
             <div className={`line ${theme.val == 1 ? "" : "changed"}`}></div>
-        </section>
+        </Section>
     );
 }

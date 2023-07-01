@@ -1,9 +1,15 @@
 import ProjectBox from "./ProjectBoxes";
 import Navbar from "../Navbar/Navbar";
 import Heading from "../ThemeComponents/SectionHeading";
+import Section from "../Section/Section";
 export default function Projects() {
     return (
-        <section className="projects" id="projects">
+        <Section
+            className="projects"
+            icon="/projects.png"
+            title="Projects"
+            id="projects"
+        >
             <Heading>
                 Projects
                 <Navbar except="Projects"></Navbar>
@@ -46,6 +52,6 @@ export default function Projects() {
                     excess
                 ></ProjectBox>
             </div>
-        </section>
+        </Section>
     );
 }

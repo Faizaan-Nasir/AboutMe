@@ -3,11 +3,12 @@ import Navbar from "../Navbar/Navbar";
 import Heading from "../ThemeComponents/SectionHeading";
 import DateEntry from "../DateEntry/DateEntry";
 import { ThemeContext } from "../../lib/ThemeContext";
+import Section from "../Section/Section";
 
 export default function Blog() {
     const { theme } = useContext(ThemeContext);
     return (
-        <section id="blog" className="blog">
+        <Section className="blog" icon="/blog.png" title="Weblog" id="blog">
             <Heading>
                 Weblog
                 <Navbar except={"Weblog"}></Navbar>
@@ -36,6 +37,6 @@ export default function Blog() {
                     placeat atque ducimus.
                 </DateEntry>
             </div>
-        </section>
+        </Section>
     );
 }

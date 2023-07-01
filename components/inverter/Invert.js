@@ -19,15 +19,6 @@ function invert() {
         document.getElementById(
             "body"
         ).style.backgroundImage = `url('./src/background-white.png')`;
-
-        // Manually changing hr1's background colour
-        document.getElementById("hr1").style.backgroundColor =
-            "rgb(40, 124, 105)";
-
-        document.getElementById("hr2").style.backgroundColor =
-            "rgb(40, 124, 105)";
-        document.getElementById("hr3").style.backgroundColor =
-            "rgb(40, 124, 105)";
     } else {
         window.location.href = "index.html";
     }

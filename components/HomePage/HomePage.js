@@ -1,14 +1,20 @@
 "use client";
 
-import Inverter from "../inverter/Invert";
+import Inverter from "../Inverter/Invert";
 import { useContext } from "react";
 import { ThemeContext } from "../../lib/ThemeContext";
+import Section from "../Section/Section";
 
 export default function HomePage() {
     const { theme } = useContext(ThemeContext);
     return (
         <>
-            <section className="home-page" id="home">
+            <Section
+                className="home-page"
+                title="Home"
+                icon="home_page.png"
+                id="home"
+            >
                 <Inverter></Inverter>
                 <h1
                     id="h1"
@@ -59,7 +65,7 @@ export default function HomePage() {
                         }`,
                     }}
                 />
-            </section>
+            </Section>
         </>
     );
 }
