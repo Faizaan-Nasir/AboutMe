@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../lib/ThemeContext";
 
-export default function DateEntry({ date, children }) {
+export default function DateEntry({ date, content }) {
     const { theme } = useContext(ThemeContext);
     return (
         <div className="date">
@@ -13,9 +13,8 @@ export default function DateEntry({ date, children }) {
                         theme.val == 1 ? "white" : "rgb(40, 124, 105)"
                     }`,
                 }}
-            >
-                {children}
-            </div>
+                dangerouslySetInnerHTML={{ __html: content }}
+            ></div>
         </div>
     );
 }

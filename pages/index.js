@@ -1,21 +1,60 @@
-"use client";
 import HomePage from "../components/HomePage/HomePage";
 import About from "../components/About/About";
 import Blog from "../components/Blog/Blog";
 import Projects from "../components/Projects/Projects";
 import Divider from "../components/ThemeComponents/Dividers";
+import Head from "next/head";
 import { ThemeContext, ThemeProvider } from "../lib/ThemeContext";
-import { useContext, useEffect, useState } from "react";
-import { useInView } from "react-intersection-observer";
-export default function Page() {
+import { useContext, useEffect } from "react";
+import DateEntry from "../components/DateEntry/DateEntry";
+import { GetProjects, GetUpdates } from "../contentful/contentful";
+export default function Page(props) {
     return (
         <ThemeProvider>
-            <Content></Content>
+            <Head>
+                <title id="title">Home Page</title>
+                <link
+                    rel="shortcut icon"
+                    href="/home_page.png"
+                    type="image/x-icon"
+                    id="icon"
+                />
+            </Head>
+            <ThemeController>
+                <div className="error">
+                    <div className="error-message">
+                        This website does not work well in this orientation.
+                        Please use this website either vertically (if you are on
+                        your mobile or on your tablet) or use the website in
+                        it&apos;s default orientation.
+                    </div>
+                </div>
+                <div className="main-body">
+                    <HomePage></HomePage>
+                    <Divider />
+                    <About></About>
+                    <Divider />
+                    <Blog>
+                        {props.updates.map((u) => {
+                            let date = new Date(u.fields.dateOfEntry);
+                            return (
+                                <DateEntry
+                                    key={u.sys.id}
+                                    date={date.toDateString()}
+                                    content={u.fields.description}
+                                ></DateEntry>
+                            );
+                        })}
+                    </Blog>
+                    <Divider />
+                    <Projects></Projects>
+                </div>
+            </ThemeController>
         </ThemeProvider>
     );
 }
 
-export function Content() {
+export function ThemeController({ children }) {
     const { theme } = useContext(ThemeContext);
     useEffect(() => {
         let bg =
@@ -25,25 +64,17 @@ export function Content() {
         document.body.style.backgroundImage = bg;
     }, [theme]);
 
-    return (
-        <>
-            <div className="error">
-                <div className="error-message">
-                    This website does not work well in this orientation. Please
-                    use this website either vertically (if you are on your
-                    mobile or on your tablet) or use the website in it&apos;s
-                    default orientation.
-                </div>
-            </div>
-            <div className="main-body">
-                <HomePage></HomePage>
-                <Divider />
-                <About></About>
-                <Divider />
-                <Blog></Blog>
-                <Divider />
-                <Projects></Projects>
-            </div>
-        </>
-    );
+    return children;
+}
+
+export async function getStaticProps() {
+    const updates = await GetUpdates();
+    // const projects = await GetProjects();
+    console.log(updates);
+    return {
+        props: {
+            updates,
+            // projects,
+        },
+    };
 }

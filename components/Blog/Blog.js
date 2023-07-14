@@ -5,7 +5,7 @@ import DateEntry from "../DateEntry/DateEntry";
 import { ThemeContext } from "../../lib/ThemeContext";
 import Section from "../Section/Section";
 
-export default function Blog() {
+export default function Blog({ children }) {
     const { theme } = useContext(ThemeContext);
     return (
         <Section className="blog" icon="/blog.png" title="Weblog" id="blog">
@@ -18,24 +18,7 @@ export default function Blog() {
                 id="entries"
                 style={{ color: `${theme.val == 1 ? "white" : "black"}` }}
             >
-                <DateEntry date="10th March, 2023">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Inventore distinctio earum excepturi eligendi, nemo illum
-                    nihil perferendis ea eius beatae quae? Quia nisi nemo
-                    molestias dolores, veniam doloremque sint
-                </DateEntry>
-                <DateEntry date="9th March, 2023">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Consectetur laudantium ea voluptas eveniet, qui facere sequi
-                    quos accusantium nemo culpa fugit itaque ullam, neque rem?
-                    Esse doloribus autem non ratione.
-                </DateEntry>
-                <DateEntry date="8th March, 2023">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                    nam libero, eveniet omnis culpa consequuntur dolores est
-                    sint quam totam nihil id quae ipsa mollitia iusto aperiam
-                    placeat atque ducimus.
-                </DateEntry>
+                {children}
             </div>
         </Section>
     );
