@@ -9,11 +9,11 @@ const client = createClient({
 export let GetProjects = async () => {
     let res = await client.getEntries({
         content_type: "projects",
-        select: "sys.id,fields.name,fields.link,fields.image_link",
+        select: "sys.id,fields.name,fields.link,fields.imageLink,fields.description",
         order: "-sys.createdAt",
     });
 
-    return res;
+    return res.items;
 };
 
 export let GetUpdates = async () => {

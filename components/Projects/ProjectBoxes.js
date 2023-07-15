@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../lib/ThemeContext";
 
-export default function ProjectBox({ title, desc, link, excess }) {
+export default function ProjectBox({ title, desc, link, image_link, excess }) {
     const { theme } = useContext(ThemeContext);
 
     return (
@@ -9,6 +9,7 @@ export default function ProjectBox({ title, desc, link, excess }) {
             className={`${excess ? "project-boxes-excess" : "project-boxes"} ${
                 theme.val == 1 ? "" : "changed"
             }`}
+            style={{ backgroundImage: `${image_link || "url(/sample.jpg)"}` }}
         >
             <div className={`headings ${theme.val == 1 ? "" : "changed"}`}>
                 {title}

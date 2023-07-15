@@ -521,7 +521,7 @@ button {
 
 .project-boxes:hover {
     transform: scale(1.02);
-    background-image: none;
+    background-image: none !important;
 }
 
 .project-boxes:hover > .description {
@@ -534,7 +534,7 @@ button {
 
 .project-boxes-excess:hover {
     transform: scale(1.02);
-    background-image: none;
+    background-image: none !important;
 }
 
 .project-boxes-excess:hover > .description {

@@ -8,6 +8,7 @@ import { ThemeContext, ThemeProvider } from "../lib/ThemeContext";
 import { useContext, useEffect } from "react";
 import DateEntry from "../components/DateEntry/DateEntry";
 import { GetProjects, GetUpdates } from "../contentful/contentful";
+import ProjectBox from "../components/Projects/ProjectBoxes";
 export default function Page(props) {
     return (
         <ThemeProvider>
@@ -47,7 +48,20 @@ export default function Page(props) {
                         })}
                     </Blog>
                     <Divider />
-                    <Projects></Projects>
+                    <Projects>
+                        {props.projects.map((p, i) => {
+                            return (
+                                <ProjectBox
+                                    title={p.fields.name}
+                                    link={p.fields.link}
+                                    image_link={p.fields.imageLink}
+                                    desc={p.fields.description}
+                                    key={i}
+                                    excess={i > 2}
+                                />
+                            );
+                        })}
+                    </Projects>
                 </div>
             </ThemeController>
         </ThemeProvider>
@@ -69,12 +83,12 @@ export function ThemeController({ children }) {
 
 export async function getStaticProps() {
     const updates = await GetUpdates();
-    // const projects = await GetProjects();
-    console.log(updates);
+    const projects = await GetProjects();
     return {
         props: {
             updates,
-            // projects,
+            projects,
         },
+        revalidate: 10 * 60, // Revalidates every 10 minutes
     };
 }
