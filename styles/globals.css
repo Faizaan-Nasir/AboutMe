@@ -459,7 +459,7 @@ button {
     margin-bottom: 7vh;
     width: 220px;
     height: 23vh;
-    background: white;
+    background: rgb(69, 69, 69);
     border-radius: 25px;
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -475,7 +475,7 @@ button {
     margin-bottom: 7vh;
     width: 220px;
     height: 23vh;
-    background: white;
+    background: rgb(69, 69, 69);
     border-radius: 25px;
     text-align: center;
     font-family: "Poppins", sans-serif;
