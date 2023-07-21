@@ -14,7 +14,8 @@ export default function ProjectBox({ title, desc, link, image_link, excess }) {
                     ? `url(${image_link})`
                     : "url(/sample.jpg)",
                 backgroundPosition:'center',
-                backgroundSize:'cover'
+                backgroundSize:'cover',
+                border:'3px solid black'
             }}
         >
             <div className={`headings ${theme.val == 1 ? "" : "changed"}`}>
