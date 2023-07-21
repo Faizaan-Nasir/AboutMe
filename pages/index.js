@@ -89,6 +89,6 @@ export async function getStaticProps() {
             updates,
             projects,
         },
-        revalidate: 10 * 60, // Revalidates every 10 minutes
+        revalidate: 60, // Revalidates every 10 minutes
     };
 }
