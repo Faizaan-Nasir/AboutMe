@@ -488,6 +488,7 @@ button {
 .project-boxes.changed {
     background: rgb(59, 179, 151);
     background-image: url(/sample.jpg);
+    border: 3px solid rgb(59, 179, 151);
     color: white;
 }
 
