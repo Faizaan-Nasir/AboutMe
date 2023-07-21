@@ -495,6 +495,7 @@ button {
 .project-boxes-excess.changed {
     background: rgb(59, 179, 151);
     background-image: url(/sample.jpg);
+    border: 3px solid rgb(59, 179, 151);
     color: white;
 }
 
@@ -509,7 +510,7 @@ button {
     padding-bottom: 2vh;
     font-size: 20px;
     font-weight: 600;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 24px 24px;
 }
 
 .headings.changed {
