@@ -9,7 +9,11 @@ export default function ProjectBox({ title, desc, link, image_link, excess }) {
             className={`${excess ? "project-boxes-excess" : "project-boxes"} ${
                 theme.val == 1 ? "" : "changed"
             }`}
-            style={{ backgroundImage: `${image_link || "url(/sample.jpg)"}` }}
+            style={{
+                backgroundImage: image_link
+                    ? `url(${image_link})`
+                    : "url(/sample.jpg)",
+            }}
         >
             <div className={`headings ${theme.val == 1 ? "" : "changed"}`}>
                 {title}
