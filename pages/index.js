@@ -82,7 +82,7 @@ export function ThemeController({ children }) {
 }
 
 export async function getStaticProps() {
-    const updates = await GetUpdates(3);
+    const updates = await GetUpdates(2);
     const projects = await GetProjects(6);
     return {
         props: {
